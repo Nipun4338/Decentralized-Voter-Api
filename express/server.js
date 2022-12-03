@@ -8,6 +8,9 @@ var cors = require('cors')
 
 app.use(cors())
 
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 var voter=[];
 
 function addVoter(nid, name, age, gender){
@@ -24,13 +27,13 @@ addVoter('1698481568', "Priti Chowdhury", 78, "female");
 addVoter('8498116799', "Motahera Jahan", 19, "female");
 
 const router = express.Router();
-router.get('/', (req, res) => {
+router.get('/', urlencodedParser, (req, res) => {
   res.send(voter);
 });
 
-app.use(express.json());
+app.use(bodyParser.json({ type: 'application/*+json' }));
 app.use('/.netlify/functions/server', router);  // path must route to lambda
-app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
+app.use('/', urlencodedParser, (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 module.exports = app;
 module.exports.handler = serverless(app);
