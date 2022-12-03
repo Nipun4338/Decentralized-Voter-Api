@@ -28,7 +28,6 @@ router.get('/', (req, res) => {
   res.send(voter);
 });
 
-app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 app.use('/', (req, res) => res.send(voter));
 
