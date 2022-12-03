@@ -28,9 +28,12 @@ addVoter('8498116799', "Motahera Jahan", 19, "female");
 
 const router = express.Router();
 router.get('/', urlencodedParser, (req, res) => {
-  res.send(voter);
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.write(JSON.stringify(voter));
+  res.end();
 });
-
+router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
+router.post('/', (req, res) => res.json({ postBody: req.body }));
 app.use(bodyParser.json({ type: 'application/*+json' }));
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 app.use('/', urlencodedParser, (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
