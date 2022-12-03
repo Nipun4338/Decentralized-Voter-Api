@@ -28,7 +28,7 @@ addVoter('8498116799', "Motahera Jahan", 19, "female");
 
 const router = express.Router();
 router.get('/', urlencodedParser, (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write(JSON.stringify(voter));
   res.end();
 });
