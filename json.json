@@ -1,0 +1,50 @@
+[
+    {
+    "nid": "1234567890",
+    "name": "Abdur Rahman",
+    "age": 35,
+    "gender": "male"
+    },
+    {
+    "nid": "2411896197",
+    "name": "Yusuf Jalil",
+    "age": 27,
+    "gender": "male"
+    },
+    {
+    "nid": "1849461535",
+    "name": "Ranjit Chandra Das",
+    "age": 62,
+    "gender": "male"
+    },
+    {
+    "nid": "4998162303",
+    "name": "Humaira Begum",
+    "age": 43,
+    "gender": "female"
+    },
+    {
+    "nid": "9849881656",
+    "name": "Partha Gomez",
+    "age": 39,
+    "gender": "male"
+    },
+    {
+    "nid": "9844951666",
+    "name": "Afia Khatun",
+    "age": 56,
+    "gender": "female"
+    },
+    {
+    "nid": "1698481568",
+    "name": "Priti Chowdhury",
+    "age": 78,
+    "gender": "female"
+    },
+    {
+    "nid": "8498116799",
+    "name": "Motahera Jahan",
+    "age": 19,
+    "gender": "female"
+    }
+    ]
